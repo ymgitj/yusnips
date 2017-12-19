@@ -14,7 +14,9 @@ snippet <?=
 snippet ?=
 	<?= ${0} ?>
 snippet ?
-	<?php ${0} ?>
+	<?php 
+	${0}
+	?>
 snippet ?f
 	<?php foreach ($${1:vars} as $${2:$var}): ?>
 		${0:${VISUAL}}
@@ -334,8 +336,8 @@ snippet for "for ($i = 0; $i < $count; $i++) { ... }"
 	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
 		${0:${VISUAL}}
 	}
-snippet foreach "foreach ($var as $value) { .. }"
-	foreach ($${1:variable} as $${2:value}) {
+snippet foreach "foreach ($var as $key => $value) { .. }"
+	foreach ($${1:variable} as $${2:key} => $${3:value}) {
 		${0:${VISUAL}}
 	}
 snippet foreachil "<?php foreach ($var as $value): ?>  ... <?php endforeach; ?>"
